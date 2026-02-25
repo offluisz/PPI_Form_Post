@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form post</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column; 
+            align-items: center;    
+            height: 100vh;         
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        .tittle{
+          align-items: center;
+        }
+        .form{
+            background: rgb(199, 199, 255);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div class="tittle">
+        <h1>form request using the post method</h1>
+    </div>
+    <br>
+    <div class="form">
+        <form action="/submit" method="post">
+        <label for="name">Client:</label>
+        <input type="text" name="name" id="name" required>
+        <br>
+        <label for="type">Service type:</label>
+        <select name="type" id="type">
+            <option value="medical">medical appointment</option>
+            <option value="physio">physiotherapy</option>
+            <option value="surgery">surgery</option>
+        </select>
+        <br>
+        <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
