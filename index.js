@@ -1,5 +1,5 @@
-import express from 'express';
-
+const express = require('express');
+const loginRouter = require('./routes/indexRoute');
 const server = express();
 
 server.use(express.json());
@@ -11,6 +11,8 @@ server.set('views', './views');
 server.get('/', (req, res) => {
     res.render('index');
 });
+
+server.use("/", loginRouter);
 
 server.post('/submit', (req, res) => {
   const { name, type } = req.body;
