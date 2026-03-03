@@ -8,7 +8,7 @@ server.set('view engine', 'ejs');
 server.set('views', './views');
 
 
-server.use("/", loginRouter);
+server.use('/', loginRouter);
 
 server.post('/submit', (req, res) => {
   const { name, type } = req.body;
