@@ -8,10 +8,6 @@ server.set('view engine', 'ejs');
 server.set('views', './views');
 
 
-server.get('/', (req, res) => {
-    res.render('index');
-});
-
 server.use("/", loginRouter);
 
 server.post('/submit', (req, res) => {
